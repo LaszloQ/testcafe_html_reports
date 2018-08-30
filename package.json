@@ -1,0 +1,30 @@
+{
+  "name": "testcafe_html_reports",
+  "version": "1.0.0",
+  "description": "Create html files to display the test execution results.",
+  "main": "index.js",
+  "scripts": {
+    "chrome": "testcafe chrome -e -S -s screenshots '/reports/result.js' --reporter json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaszloQ/testcafe_html_reports.git"
+  },
+  "keywords": [
+    "testcafe",
+    "results",
+    "reports",
+    "html",
+    "json",
+    "pretty"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaszloQ/testcafe_html_reports/issues"
+  },
+  "homepage": "https://github.com/LaszloQ/testcafe_html_reports#readme",
+  "devDependencies": {
+    "testcafe": "^0.21.1"
+  }
+}

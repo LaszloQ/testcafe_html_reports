@@ -6,15 +6,7 @@ import { checkboxPage } from "./checkbox-page";
     .page( baseUrl + checkboxPage.path )
 
 
-
-  test( "Header should be Checkboxes", async t => {
-    const header = await checkboxPage.header.innerText;
-
-    await t.expect( header ).eql( "Checkboxes" )
-  });
-
-
-  test( "Checkbox 2 is selected by default", async t => {
+  test.skip( "Checkbox 2 is selected by default", async t => {
     const isSecondCheckBoxChecked = await checkboxPage.secondCheckBox.checked;
 
     await t.expect( isSecondCheckBoxChecked ).eql( true )
@@ -38,4 +30,11 @@ import { checkboxPage } from "./checkbox-page";
     await t
       .click( checkboxPage.secondCheckBox )
       .expect( checkboxPage.secondCheckBox.checked ).eql( true )
+  });
+
+
+  test( "Header should be Checkboxes", async t => {
+    const header = await checkboxPage.header.innerText;
+
+    await t.expect( header ).eql( "Checkboxes" )
   });

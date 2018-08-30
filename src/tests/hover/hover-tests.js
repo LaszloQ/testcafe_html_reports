@@ -16,7 +16,7 @@ import { hoverPage } from "./hover-page";
     await t
       .hover( hoverPage.firstPhoto )
       .expect( hoverPage.firstPhotoUserName.visible ).eql( true )
-      .expect( hoverPage.firstPhotoUserName.innerText ).eql( "user1" )
+      .expect( hoverPage.firstPhotoUserName.innerText ).eql( "name: user1" )
   });
 
 

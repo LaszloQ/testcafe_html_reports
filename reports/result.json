@@ -1,45 +1,45 @@
 {
-  "startTime": "2018-08-30T10:55:33.379Z",
-  "endTime": "2018-08-30T10:56:18.362Z",
+  "startTime": "2018-08-30T12:00:04.376Z",
+  "endTime": "2018-08-30T12:00:20.337Z",
   "userAgents": [
     "Firefox 60.0.0 / Mac OS X 10.13.0"
   ],
-  "passed": 4,
-  "total": 7,
-  "skipped": 0,
+  "passed": 5,
+  "total": 6,
+  "skipped": 1,
   "fixtures": [
     {
       "name": "Checkboxes",
       "path": "/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js",
       "tests": [
         {
-          "name": "Header should be Checkboxes",
-          "errs": [],
-          "durationMs": 2999,
-          "screenshotPath": null,
-          "skipped": false
-        },
-        {
           "name": "Checkbox 2 is selected by default",
           "errs": [],
-          "durationMs": 2115,
+          "durationMs": 2,
           "screenshotPath": null,
-          "skipped": false
+          "skipped": true
         },
         {
           "name": "Clicking on checkox 1 will select checkbox 1",
           "errs": [],
-          "durationMs": 2689,
+          "durationMs": 3402,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Clicking on checkbox 2 will deselect checkbox 2",
           "errs": [
-            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-4/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   35 |\n   36 |\n   37 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   38 |    await t\n   39 |      .click( checkboxPage.secondCheckBox )\n > 40 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   41 |  });\n   42 |\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:40:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:37:3)"
+            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_15-00-03/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   27 |\n   28 |\n   29 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   30 |    await t\n   31 |      .click( checkboxPage.secondCheckBox )\n > 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   33 |  });\n   34 |\n   35 |\n   36 |  test( \"Header should be Checkboxes\", async t => {\n   37 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)"
           ],
-          "durationMs": 6564,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-4",
+          "durationMs": 6594,
+          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_15-00-03/test-3",
+          "skipped": false
+        },
+        {
+          "name": "Header should be Checkboxes",
+          "errs": [],
+          "durationMs": 1093,
+          "screenshotPath": null,
           "skipped": false
         }
       ]
@@ -51,26 +51,22 @@
         {
           "name": "Header should be Hovers",
           "errs": [],
-          "durationMs": 2905,
+          "durationMs": 1234,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the username",
-          "errs": [
-            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-6/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   13 |\n   14 |\n   15 |  test( \"Hovering any photo will display the username\", async t => {\n   16 |    await t\n   17 |      .hover( hoverPage.firstPhoto )\n > 18 |      .expect( hoverPage.firstPhotoUserName.visible ).eql( true )\n   19 |      .expect( hoverPage.firstPhotoUserName.innerText ).eql( \"user1\" )\n   20 |  });\n   21 |\n   22 |\n   23 |  test( \"Hovering any photo will display the view profile button\", async t => {\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/hover/hover-tests.js:18:55)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/hover/hover-tests.js:15:3)"
-          ],
-          "durationMs": 14039,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-6",
+          "errs": [],
+          "durationMs": 1651,
+          "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the view profile button",
-          "errs": [
-            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-7/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   21 |\n   22 |\n   23 |  test( \"Hovering any photo will display the view profile button\", async t => {\n   24 |    await t\n   25 |      .hover( hoverPage.firstPhoto )\n > 26 |      .expect( hoverPage.firstPhotoButton.visible ).eql( true )\n   27 |      .expect( hoverPage.firstPhotoButton.innerText ).eql( \"View profile\" )\n   28 |  });\n   29 |\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/hover/hover-tests.js:26:53)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/hover/hover-tests.js:23:3)"
-          ],
-          "durationMs": 13605,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_13-55-33/test-7",
+          "errs": [],
+          "durationMs": 1939,
+          "screenshotPath": null,
           "skipped": false
         }
       ]

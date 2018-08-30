@@ -6,5 +6,5 @@ export default class Page {
 
     this.header = Selector( "h3" );
 
-  }
+  };
 };

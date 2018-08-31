@@ -1,12 +1,12 @@
 {
-  "startTime": "2018-08-31T10:09:04.357Z",
-  "endTime": "2018-08-31T10:10:14.616Z",
+  "startTime": "2018-08-31T11:29:25.076Z",
+  "endTime": "2018-08-31T11:29:48.979Z",
   "userAgents": [
     "Firefox 60.0.0 / Mac OS X 10.13.0"
   ],
   "passed": 5,
   "total": 6,
-  "skipped": 1,
+  "skipped": 3,
   "fixtures": [
     {
       "name": "Checkboxes",
@@ -15,32 +15,52 @@
         {
           "name": "Checkbox 2 is selected by default",
           "errs": [],
-          "durationMs": 2,
+          "durationMs": 3,
           "screenshotPath": null,
           "skipped": true
         },
         {
           "name": "Clicking on checkox 1 will select checkbox 1",
           "errs": [],
-          "durationMs": 39281,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots",
+          "durationMs": 5178,
+          "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Clicking on checkbox 2 will deselect checkbox 2",
           "errs": [
-            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_13-09-03/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   29 |\n   30 |\n   31 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   32 |    await t\n   33 |      .click( checkboxPage.secondCheckBox )\n > 34 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   35 |  });\n   36 |\n   37 |\n   38 |  test( \"Header should be Checkboxes\", async t => {\n   39 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:34:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:31:3)"
+            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_14-29-24/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   27 |\n   28 |\n   29 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   30 |    await t\n   31 |      .click( checkboxPage.secondCheckBox )\n > 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   33 |  });\n   34 |\n   35 |\n   36 |  test( \"Header should be Checkboxes\", async t => {\n   37 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)"
           ],
-          "durationMs": 18466,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_13-09-03/test-3",
+          "durationMs": 7819,
+          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_14-29-24/test-3",
           "skipped": false
         },
         {
           "name": "Header should be Checkboxes",
           "errs": [],
-          "durationMs": 2818,
+          "durationMs": 2748,
           "screenshotPath": null,
           "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Drag n Drop",
+      "path": "/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/dragndrop/dragndrop.js",
+      "tests": [
+        {
+          "name": "Items can be dragged and dropped",
+          "errs": [],
+          "durationMs": 0,
+          "screenshotPath": null,
+          "skipped": true
+        },
+        {
+          "name": "Releasing a dragged item will drop",
+          "errs": [],
+          "durationMs": 0,
+          "screenshotPath": null,
+          "skipped": true
         }
       ]
     },
@@ -51,21 +71,21 @@
         {
           "name": "Header should be Hovers",
           "errs": [],
-          "durationMs": 2530,
+          "durationMs": 3080,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the username",
           "errs": [],
-          "durationMs": 2953,
+          "durationMs": 2403,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the view profile button",
           "errs": [],
-          "durationMs": 4164,
+          "durationMs": 2615,
           "screenshotPath": null,
           "skipped": false
         }

@@ -27,11 +27,11 @@
     </header>
     <article class="fixtures">
         {{#each fixtures}}
-        <div class="fixture">
+        <div class="fixture {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
             <button>{{name}}</button>
             {{#each tests}}
-            <div class="test-container">
-                <button class="test">{{name}} {{durationMs}}</button>
+            <div class="test-container  {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
+                <button>{{name}} {{durationMs}}</button>
                 {{#if errs.length}}
                 <div class="error-container">Err: {{errs.[0]}}</div>
                 <img src={{screenshotPath}} alt="error-screenshot"> {{/if}}

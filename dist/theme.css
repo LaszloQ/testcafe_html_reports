@@ -81,3 +81,21 @@ h2 {
     width: 600px;
     margin: 0 auto;
 }
+
+.fixtures .failed button,
+.test-container .failed button {
+    background: #dc3545;
+    color: white;
+}
+
+.fixtures .passed button,
+.test-container .passed button {
+    background: #28a745;
+    color: white;
+}
+
+.fixtures .skipped button,
+.test-container .skipped button {
+    background: #007bff;
+    color: white;
+}

@@ -5,12 +5,14 @@ const report = require("../reports/result.json");
 
 var app = express();
 
-app.engine("handlebars", exphbs());
-app.set("view engine", "handlebars");
+app.engine("hbs", exphbs());
+app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "templates"));
 
 app.get("/", function(req, res) {
   res.render("index", report);
 });
+
+app.use(express.static(path.resolve(__dirname, "../dist")));
 
 app.listen(3000);

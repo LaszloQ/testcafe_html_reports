@@ -4,7 +4,8 @@
   "description": "Create html files to display the test execution results.",
   "main": "index.js",
   "scripts": {
-    "html-reporter": "nodemon reporter",
+    "html-reporter-web": "nodemon -e js,hbs reporter",
+    "html-reporter-static": "hbs --data ./reports/result.json ./reporter/templates/index.hbs --output ./dist/",
     "firefox": "testcafe firefox -e -S -s screenshots -r json:reports/result.json src/tests"
   },
   "repository": {
@@ -31,6 +32,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "hbs-cli": "^1.2.0"
   }
 }

@@ -110,8 +110,14 @@
             display: none;
         }
 
-        .hide-test .details {
+        .hide-test .details,
+        .hide-test .screenshots {
             display: none;
+        }
+
+        .screenshots img {
+            width: auto;
+            border: 1px solid gray;
         }
     </style>
 </head>
@@ -142,9 +148,14 @@
                 {{#if errs.length}}
                 <div class="details">
                     <div class="error-container">Err: {{errs.[0]}}</div>
-                    <img src={{screenshotPath}} alt="error-screenshot">
                 </div>
                 {{/if}}
+                <div class="screenshots">
+                    {{#each screenshots}}
+                    <a href={{screenshotPath}} target="_blank">
+                        <img src={{thumbnailPath}} alt="error-screenshot" />
+                    </a> {{/each}}
+                </div>
             </div>
             {{/each}}
         </div>

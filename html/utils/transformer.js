@@ -78,7 +78,7 @@ module.exports = function(obj) {
         name: test.name,
         errs: test.errs,
         durationMs: formatTime(test.durationMs),
-        screenshotPath: test.screenshotPath,
+        screenshots: test.screenshots,
         skipped: test.skipped,
         passed: isTestPassed(test.skipped, test.errs),
         failed: isTestFailed(test.skipped, test.errs)

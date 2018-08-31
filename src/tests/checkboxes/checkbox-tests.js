@@ -1,40 +1,41 @@
 import { baseUrl } from "../../support/data";
 import { checkboxPage } from "./checkbox-page";
 
+fixture`Checkboxes`.page(baseUrl + checkboxPage.path);
 
-  fixture `Checkboxes`
-    .page( baseUrl + checkboxPage.path )
+test.skip("Checkbox 2 is selected by default", async t => {
+  const isSecondCheckBoxChecked = await checkboxPage.secondCheckBox.checked;
 
+  await t.expect(isSecondCheckBoxChecked).eql(true);
+});
 
-  test.skip( "Checkbox 2 is selected by default", async t => {
-    const isSecondCheckBoxChecked = await checkboxPage.secondCheckBox.checked;
+test("Clicking on checkox 1 will select checkbox 1", async t => {
+  const isFirstCheckboxCheckedByDefault = await checkboxPage.firstCheckbox
+    .checked;
 
-    await t.expect( isSecondCheckBoxChecked ).eql( true )
-  });
+  await t
+    .takeScreenshot()
+    .expect(isFirstCheckboxCheckedByDefault)
+    .eql(false)
+    .click(checkboxPage.firstCheckbox);
 
+  const isFirstCheckboxChecked = await checkboxPage.firstCheckbox.checked;
 
-  test( "Clicking on checkox 1 will select checkbox 1", async t => {
-    const isFirstCheckboxCheckedByDefault = await checkboxPage.firstCheckbox.checked;
+  await t
+    .takeScreenshot()
+    .expect(isFirstCheckboxChecked)
+    .eql(true);
+});
 
-    await t
-      .expect( isFirstCheckboxCheckedByDefault ).eql( false )
-      .click( checkboxPage.firstCheckbox )
+test("Clicking on checkbox 2 will deselect checkbox 2", async t => {
+  await t
+    .click(checkboxPage.secondCheckBox)
+    .expect(checkboxPage.secondCheckBox.checked)
+    .eql(true);
+});
 
-    const isFirstCheckboxChecked = await checkboxPage.firstCheckbox.checked;
+test("Header should be Checkboxes", async t => {
+  const header = await checkboxPage.header.innerText;
 
-    await t.expect( isFirstCheckboxChecked ).eql( true )
-  });
-
-
-  test( "Clicking on checkbox 2 will deselect checkbox 2", async t => {
-    await t
-      .click( checkboxPage.secondCheckBox )
-      .expect( checkboxPage.secondCheckBox.checked ).eql( true )
-  });
-
-
-  test( "Header should be Checkboxes", async t => {
-    const header = await checkboxPage.header.innerText;
-
-    await t.expect( header ).eql( "Checkboxes" )
-  });
+  await t.expect(header).eql("Checkboxes");
+});

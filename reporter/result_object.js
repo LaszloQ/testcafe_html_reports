@@ -8,7 +8,7 @@ const getNumberOfFailedTests = function( ) {
 
 
 const fixtures = obj.fixtures;
-const results = {
+export const results = {
   general: {
     user_agent: obj.userAgents[ 0 ],
     total_test: obj.total,

@@ -38,10 +38,9 @@ module.exports = function() {
       this.currentFixture.tests.push({
         name,
         errs,
-
         durationMs: testRunInfo.durationMs,
         unstable: testRunInfo.unstable,
-        screenshotPath: testRunInfo.screenshotPath,
+        screenshots: testRunInfo.screenshots,
         skipped: testRunInfo.skipped
       });
     },
@@ -59,7 +58,6 @@ module.exports = function() {
       const reportObj = transformer(this.report);
       const html = template(reportObj);
 
-      console.log(reportObj);
       this.write(html);
     }
   };

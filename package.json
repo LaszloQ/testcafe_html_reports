@@ -6,7 +6,7 @@
   "scripts": {
     "html-reporter-web": "nodemon -e js,hbs reporter",
     "html-reporter-static": "hbs --data ./reporter/test-data.json ./reporter/templates/index.hbs --output ./dist/",
-    "firefox": "testcafe firefox -e -S -s screenshots -r html:reports/result.html src/tests"
+    "firefox": "testcafe firefox -e -S -s screenshots -r html src/tests"
   },
   "repository": {
     "type": "git",

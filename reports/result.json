@@ -1,8 +1,10 @@
 {
+
   "startTime": "2018-08-31T08:05:25.189Z",
   "endTime": "2018-08-31T08:05:54.585Z",
+
   "userAgents": [
-    "Firefox 60.0.0 / Mac OS X 10.13.0"
+    "Firefox 61.0.0 / Windows 10 0.0.0"
   ],
   "passed": 5,
   "total": 6,
@@ -10,35 +12,43 @@
   "fixtures": [
     {
       "name": "Checkboxes",
-      "path": "/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js",
+      "path": "C:\\Users\\alberts\\Desktop\\TestCafeReport\\testcafe_html_reports\\src\\tests\\checkboxes\\checkbox-tests.js",
       "tests": [
         {
           "name": "Checkbox 2 is selected by default",
           "errs": [],
+
           "durationMs": 1,
+
           "screenshotPath": null,
           "skipped": true
         },
         {
           "name": "Clicking on checkox 1 will select checkbox 1",
           "errs": [],
+
           "durationMs": 9505,
+
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Clicking on checkbox 2 will deselect checkbox 2",
           "errs": [
+
             "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_11-05-24/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   27 |\n   28 |\n   29 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   30 |    await t\n   31 |      .click( checkboxPage.secondCheckBox )\n > 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   33 |  });\n   34 |\n   35 |\n   36 |  test( \"Header should be Checkboxes\", async t => {\n   37 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)"
           ],
           "durationMs": 7772,
           "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_11-05-24/test-3",
+
           "skipped": false
         },
         {
           "name": "Header should be Checkboxes",
           "errs": [],
+
           "durationMs": 2037,
+
           "screenshotPath": null,
           "skipped": false
         }
@@ -46,19 +56,23 @@
     },
     {
       "name": "Hover",
-      "path": "/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/hover/hover-tests.js",
+      "path": "C:\\Users\\alberts\\Desktop\\TestCafeReport\\testcafe_html_reports\\src\\tests\\hover\\hover-tests.js",
       "tests": [
         {
           "name": "Header should be Hovers",
           "errs": [],
+
           "durationMs": 3147,
+
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the username",
           "errs": [],
+
           "durationMs": 2307,
+
           "screenshotPath": null,
           "skipped": false
         },

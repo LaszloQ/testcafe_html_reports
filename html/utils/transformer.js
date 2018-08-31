@@ -13,19 +13,11 @@ module.exports = function(obj) {
     };
 
     const isTestPassed = function(skipped, errors) {
-        if (!skipped && errors.length === 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return !skipped && errors.length === 0;
     };
 
     const isTestFailed = function(skipped, errors) {
-        if (!skipped && errors.length > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return !skipped && errors.length > 0;
     };
 
     const isFixtureFailed = function(fixture) {
@@ -58,9 +50,7 @@ module.exports = function(obj) {
     };
 
     const isFixturePassed = function(fixture) {
-        if (!fixture.failed && !fixture.skipped) {
-            return true;
-        }
+        return !fixture.failed && !fixture.skipped;
     };
 
     const results = {
@@ -88,7 +78,7 @@ module.exports = function(obj) {
                 name: test.name,
                 errs: test.errs,
                 durationMs: formatTime(test.durationMs),
-                screenshotPath: test.screenshotPath,
+                screenshots: test.screenshots,
                 skipped: test.skipped,
                 passed: isTestPassed(test.skipped, test.errs),
                 failed: isTestFailed(test.skipped, test.errs)

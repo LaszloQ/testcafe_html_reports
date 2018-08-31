@@ -13,19 +13,11 @@ module.exports = function(obj) {
   };
 
   const isTestPassed = function(skipped, errors) {
-    if (!skipped && errors.length === 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return !skipped && errors.length === 0
   };
 
   const isTestFailed = function(skipped, errors) {
-    if (!skipped && errors.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return !skipped && errors.length > 0
   };
 
   const isFixtureFailed = function(fixture) {
@@ -54,18 +46,17 @@ module.exports = function(obj) {
         return false;
       }
     }
+    return bool;
   };
 
   const isFixturePassed = function(fixture) {
-    if (!fixture.failed && !fixture.skipped) {
-      return true;
-    }
+    return !fixture.failed && !fixture.skipped;
   };
 
   const results = {
     general: {
       user_agent: obj.userAgents[0],
-      total_test: getNumberOfTotalTests(),
+      total_tests: getNumberOfTotalTests(),
       total_duration: formatTime(getTotalDuration(obj)),
       passed: obj.passed,
       failed: getNumberOfFailedTests(),

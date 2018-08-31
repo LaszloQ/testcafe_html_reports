@@ -1,6 +1,6 @@
 {
-  "startTime": "2018-08-30T12:00:04.376Z",
-  "endTime": "2018-08-30T12:00:20.337Z",
+  "startTime": "2018-08-31T06:26:19.977Z",
+  "endTime": "2018-08-31T06:26:43.982Z",
   "userAgents": [
     "Firefox 60.0.0 / Mac OS X 10.13.0"
   ],
@@ -15,30 +15,30 @@
         {
           "name": "Checkbox 2 is selected by default",
           "errs": [],
-          "durationMs": 2,
+          "durationMs": 5,
           "screenshotPath": null,
           "skipped": true
         },
         {
           "name": "Clicking on checkox 1 will select checkbox 1",
           "errs": [],
-          "durationMs": 3402,
+          "durationMs": 3710,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Clicking on checkbox 2 will deselect checkbox 2",
           "errs": [
-            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_15-00-03/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   27 |\n   28 |\n   29 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   30 |    await t\n   31 |      .click( checkboxPage.secondCheckBox )\n > 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   33 |  });\n   34 |\n   35 |\n   36 |  test( \"Header should be Checkboxes\", async t => {\n   37 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)"
+            "AssertionError: expected false to deeply equal true\n\nBrowser: Firefox 60.0.0 / Mac OS X 10.13.0\nScreenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_09-26-18/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png\n\n   27 |\n   28 |\n   29 |  test( \"Clicking on checkbox 2 will deselect checkbox 2\", async t => {\n   30 |    await t\n   31 |      .click( checkboxPage.secondCheckBox )\n > 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )\n   33 |  });\n   34 |\n   35 |\n   36 |  test( \"Header should be Checkboxes\", async t => {\n   37 |    const header = await checkboxPage.header.innerText;\n\n   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)\n   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)"
           ],
-          "durationMs": 6594,
-          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-30_15-00-03/test-3",
+          "durationMs": 9144,
+          "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_09-26-18/test-3",
           "skipped": false
         },
         {
           "name": "Header should be Checkboxes",
           "errs": [],
-          "durationMs": 1093,
+          "durationMs": 2336,
           "screenshotPath": null,
           "skipped": false
         }
@@ -51,21 +51,21 @@
         {
           "name": "Header should be Hovers",
           "errs": [],
-          "durationMs": 1234,
+          "durationMs": 2660,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the username",
           "errs": [],
-          "durationMs": 1651,
+          "durationMs": 2242,
           "screenshotPath": null,
           "skipped": false
         },
         {
           "name": "Hovering any photo will display the view profile button",
           "errs": [],
-          "durationMs": 1939,
+          "durationMs": 3855,
           "screenshotPath": null,
           "skipped": false
         }

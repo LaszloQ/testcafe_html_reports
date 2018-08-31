@@ -41,6 +41,7 @@
             border: 1px solid dimgrey;
             padding: 10px 0;
             font-weight: bold;
+            position: relative;
         }
 
         .clearfix::after {
@@ -113,6 +114,34 @@
         .hide-test .details {
             display: none;
         }
+
+        .test .name {
+            display: block;
+            float: left;
+            width: 48%;
+            text-align: left;
+            margin-left: 2%;
+        }
+
+        .test .duration {
+            display: block;
+            float: left;
+            width: 48%;
+            text-align: right;
+            margin-right: 2%;
+        }
+
+        .fixture .plus::after {
+            content: "-";
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: black
+        }
+
+        .hide-fixture .plus::after {
+            content: "+"
+        }
     </style>
 </head>
 
@@ -135,10 +164,10 @@
     <article class="fixtures">
         {{#each fixtures}}
         <div class="fixture hide-fixture {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
-            <button>{{name}}</button>
+            <button>{{name}} <span class="plus"></span></button>
             {{#each tests}}
             <div class="test-container hide-test {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
-                <button class="test">{{name}} {{durationMs}}</button>
+                <button class="test"><span class="name">{{name}}</span> <span class="duration">{{durationMs}}</button></span></button>
                 {{#if errs.length}}
                 <div class="details">
                     <div class="error-container">Err: {{errs.[0]}}</div>

@@ -15,7 +15,7 @@
         <div class="general-data-wrapper clearfix">
             <div class="general-data">
                 <h2>User agent: {{general.user_agent}}</h2>
-                <h2>Total tests: {{general.total_tests}}</h2>
+                <h2>Total tests: {{general.total_test}}</h2>
                 <h2>Total duration: {{general.total_duration}}</h2>
             </div>
             <div class="test-status">
@@ -31,7 +31,7 @@
             <button>{{name}}</button>
             {{#each tests}}
             <div class="test-container hide-test {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
-                <button class="test">{{name}} {{durationMs}}</button>
+                <button class="test"><span class="name">{{name}}</span> <span class="duration">{{durationMs}}</span></button>
                 {{#if errs.length}}
                 <div class="details">
                     <div class="error-container">Err: {{errs.[0]}}</div>

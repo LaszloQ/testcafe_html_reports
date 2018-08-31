@@ -7,6 +7,13 @@
 body {
     width: 1000px;
     margin: 0 auto;
+    border-radius: 10px;
+    background:
+    linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+    linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+    linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+    background-color:#e1ebbd;
+    background-size: 128px 128px;
 }
 
 header {
@@ -32,6 +39,12 @@ h2 {
     border: 1px solid dimgrey;
     padding: 10px 0;
     font-weight: bold;
+    border-radius: 10px;
+}
+
+.fixture button:hover,
+.test-container button:hover {
+  background-color: #2F4F4F;
 }
 
 .clearfix::after {

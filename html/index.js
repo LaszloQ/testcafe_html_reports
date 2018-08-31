@@ -58,7 +58,43 @@ module.exports = function() {
       const reportObj = transformer(this.report);
       const html = template(reportObj);
 
-      this.write(html);
+      // this.write(html);
+
+      const dir = process.env.REPORT_PATH || `${__dirname}../../reports`;
+
+      if (!fs.existsSync(dir)) {
+        let dirName = "";
+        const filePathSplit = dir.split("/");
+        for (let index = 0; index < filePathSplit.length; index++) {
+          dirName += filePathSplit[index] + "/";
+          if (!fs.existsSync(dirName)) fs.mkdirSync(dirName);
+        }
+      }
+
+      const d = new Date();
+      const timestamp =
+        d.getFullYear() +
+        "-" +
+        (d.getMonth() + 1) +
+        "-" +
+        d.getDate() +
+        "_" +
+        d.getHours() +
+        "-" +
+        d.getMinutes() +
+        "-" +
+        d.getSeconds();
+
+      let filename = `${timestamp}.html`;
+
+      if (typeof process.env.REPORT_NAME !== "undefined") {
+        filename = `${process.env.REPORT_NAME}.html`;
+      }
+
+      const file = `${dir}/${filename}`;
+
+      console.log(file);
+      fs.writeFileSync(file, html);
     }
   };
 };

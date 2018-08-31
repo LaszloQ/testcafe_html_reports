@@ -77,6 +77,10 @@
             color: #007bff;
         }
 
+        .error-container {
+            overflow: auto;
+        }
+
         .failed,
         .error-container {
             color: #dc3545;
@@ -84,11 +88,6 @@
 
         .test-container {
             width: 800px;
-            margin: 0 auto;
-        }
-
-        .error-container {
-            width: 600px;
             margin: 0 auto;
         }
 
@@ -111,6 +110,10 @@
             display: none;
         }
 
+        .details {
+            margin: 10px 0;
+        }
+
         .hide-test .details,
         .hide-test .screenshots {
             display: none;
@@ -119,7 +122,7 @@
         .test .name {
             display: block;
             float: left;
-            width: 48%;
+            width: 73%;
             text-align: left;
             margin-left: 2%;
         }
@@ -127,7 +130,7 @@
         .test .duration {
             display: block;
             float: left;
-            width: 48%;
+            width: 23%;
             text-align: right;
             margin-right: 2%;
         }
@@ -176,7 +179,7 @@
                 <button class="test"><span class="name">{{name}}</span> <span class="duration">{{durationMs}}</button></span></button>
                 {{#if errs.length}}
                 <div class="details">
-                    <div class="error-container">Err: {{errs.[0]}}</div>
+                    <pre class="error-container">Err: {{errs.[0]}}</pre>
                 </div>
                 {{/if}}
                 <div class="screenshots">

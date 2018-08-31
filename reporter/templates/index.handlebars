@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Example App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testcafe HTML Reports</title>
+    <link rel="stylesheet" href="theme.css">
 </head>
 
 <body>
-    <h1>Hello from HTML Reporter</h1>
-    <h2>{{ total }} tests in total</h2>
-    <h2>{{ passed }} tests passed</h2>
-    <h2>{{ skipped }} tests skipped</h2>
+    <header>
+        <h1>Test Results</h1>
+        <div class="general-data-wrapper clearfix">
+            <div class="general-data">
+                <h2>User agent: {{general.user_agent}}</h2>
+                <h2>Total tests: {{general.total_tests}}</h2>
+                <h2>Total duration: {{general.total_duration}}</h2>
+            </div>
+            <div class="test-status">
+                <h2 class="passed">Passed: {{general.passed}}</h2>
+                <h2 class="failed">Failed: {{general.failed}}</h2>
+                <h2 class="skipped">Skipped: {{general.skipped}}</h2>
+            </div>
+        </div>
+    </header>
+    <article class="fixtures">
+        {{#each fixtures}}
+        <button class="fixture">{{name}}</button>
+        {{#each tests}}
+        <div class="test-container">
+            <button class="test">{{name}} {{durationMs}}</button>
+            {{#if errs.length}}
+            <div class="error-container">{{errs.[0]}}</div>
+            <img src={{screenshotPath}} alt="error-screenshot"> {{/if}}
+        </div>{{/each}} {{/each}}
+    </article>
+
 </body>
 
 </html>

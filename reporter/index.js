@@ -10,7 +10,7 @@ app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "templates"));
 
 app.get("/", function(req, res) {
-  res.render("index", report);
+    res.render("index", report);
 });
 
 app.listen(3000);

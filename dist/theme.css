@@ -30,8 +30,8 @@ h2 {
     width: 100%;
     font-size: 18px;
     border: 1px solid dimgrey;
-    text-transform: uppercase;
     padding: 10px 0;
+    font-weight: bold;
 }
 
 .clearfix::after {
@@ -84,18 +84,23 @@ h2 {
 
 .fixtures .failed button,
 .test-container .failed button {
-    background: #dc3545;
-    color: white;
+    color: #dc3545;
 }
 
 .fixtures .passed button,
 .test-container .passed button {
-    background: #28a745;
-    color: white;
+    color: #28a745;
 }
 
 .fixtures .skipped button,
 .test-container .skipped button {
-    background: #007bff;
-    color: white;
+    color: #007bff;
+}
+
+.hide-fixture .test-container {
+    display: none;
+}
+
+.hide-test .details {
+    display: none;
 }

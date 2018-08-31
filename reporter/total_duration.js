@@ -1,9 +1,10 @@
-const obj = require( "../reports/result.json" );
+const obj = require("../reports/result.json");
 
-export const getTotalDurration = function( ){
+const getTotalDurration = function() {
+    const startingTime = new Date(obj.startTime);
+    const endingTime = new Date(obj.endTime);
 
-  const startingTime = new Date(obj.startTime)
-  const endingTime = new Date(obj.endTime)
+    return endingTime - startingTime;
+};
 
-return endingTime - startingTime
-}
+module.exports = getTotalDurration;

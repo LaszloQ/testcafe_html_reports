@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    width: 100%;
+    margin: 10px 10px 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.fixture button,
+.test-container button {
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid dimgrey;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.general-data,
+.test-status {
+    width: 50%;
+    float: left;
+}
+
+.general-data {
+    color: #6c757d;
+}
+
+.test-status {
+    text-align: right;
+}
+
+.general-data p,
+.test-status p {
+    margin: 5px;
+}
+
+.passed {
+    color: #28a745;
+}
+
+.skipped {
+    color: #007bff;
+}
+
+.failed,
+.error-container {
+    color: #dc3545;
+}
+
+.test-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.error-container {
+    width: 600px;
+    margin: 0 auto;
+}

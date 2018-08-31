@@ -1,38 +1,38 @@
 {
-  "name": "testcafe_html_reports",
-  "version": "1.0.0",
-  "description": "Create html files to display the test execution results.",
-  "main": "index.js",
-  "scripts": {
-    "html-reporter-web": "nodemon -e js,hbs reporter",
-    "html-reporter-static": "hbs --data ./reports/result.json ./reporter/templates/index.hbs --output ./dist/",
-    "firefox": "testcafe firefox -e -S -s screenshots -r json:reports/result.json src/tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LaszloQ/testcafe_html_reports.git"
-  },
-  "keywords": [
-    "testcafe",
-    "results",
-    "reports",
-    "html",
-    "json",
-    "pretty"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LaszloQ/testcafe_html_reports/issues"
-  },
-  "homepage": "https://github.com/LaszloQ/testcafe_html_reports#readme",
-  "devDependencies": {
-    "nodemon": "^1.18.4",
-    "testcafe": "^0.21.1"
-  },
-  "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "hbs-cli": "^1.2.0"
-  }
+    "name": "testcafe_html_reports",
+    "version": "1.0.0",
+    "description": "Create html files to display the test execution results.",
+    "main": "index.js",
+    "scripts": {
+        "html-reporter-web": "nodemon -e js,hbs reporter",
+        "html-reporter-static": "hbs --data ./reporter/test-data.json ./reporter/templates/index.hbs --output ./dist/",
+        "firefox": "testcafe firefox -e -S -s screenshots -r json:reports/result.json src/tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LaszloQ/testcafe_html_reports.git"
+    },
+    "keywords": [
+        "testcafe",
+        "results",
+        "reports",
+        "html",
+        "json",
+        "pretty"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LaszloQ/testcafe_html_reports/issues"
+    },
+    "homepage": "https://github.com/LaszloQ/testcafe_html_reports#readme",
+    "devDependencies": {
+        "nodemon": "^1.18.4",
+        "testcafe": "^0.21.1"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "express-handlebars": "^3.0.0",
+        "hbs-cli": "^1.2.0"
+    }
 }

@@ -5,24 +5,12 @@ const fixtures = obj.fixtures;
 
 
 const getNumberOfFailedTests = function( ) {
-  const failed = [ ];
-
-  for( let i = 0; i < fixtures.length; i++ ) {
-    const tests = fixtures[ i ].tests;
-
-    for( let j = 0; j < tests.length; j++ ) {
-      if( tests[ j ].errs.length > 0 ) {
-        failed.push( tests[ j ].errs[ 0 ] )
-      }
-    }
-  }
-
-  return failed.length;
+  return obj.total - obj.passed;
 };
 
 
 const getNumberOfTotalTests = function( ) {
-  return obj.total + getNumberOfFailedTests( );
+  return obj.total + obj.skipped;
 };
 
 

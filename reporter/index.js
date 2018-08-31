@@ -9,10 +9,10 @@ app.engine("hbs", exphbs());
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "templates"));
 
-app.use(express.static(path.resolve(__dirname, "../dist")));
-
 app.get("/", function(req, res) {
   res.render("index", report);
 });
+
+app.use(express.static(path.resolve(__dirname, "../dist")));
 
 app.listen(3000);

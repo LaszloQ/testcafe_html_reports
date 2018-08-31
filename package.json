@@ -4,7 +4,7 @@
   "description": "Create html files to display the test execution results.",
   "main": "index.js",
   "scripts": {
-    "html-reporter-web": "nodemon reporter",
+    "html-reporter-web": "nodemon -e js,hbs reporter",
     "html-reporter-static": "hbs --data ./reports/result.json ./reporter/templates/index.hbs --output ./dist/",
     "firefox": "testcafe firefox -e -S -s screenshots -r json:reports/result.json src/tests"
   },

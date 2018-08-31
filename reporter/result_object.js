@@ -1,6 +1,6 @@
 const obj = require( "../reports/result.json" );
 const getTotalDuration = require( "./total_duration.js" );
-const formatTime = require( "format_time.js" );
+const formatTime = require( "./format_time.js" );
 const fixtures = obj.fixtures;
 
 

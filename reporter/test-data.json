@@ -11,19 +11,26 @@
         {
             "name": "Checkboxes",
             "path": "/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js",
+            "passed": false,
+            "failed": true,
+            "skipped": false,
             "tests": [
                 {
                     "name": "Checkbox 2 is selected by default",
                     "errs": [],
                     "durationMs": 5,
                     "screenshotPath": null,
-                    "skipped": true
+                    "skipped": true,
+                    "passed": false,
+                    "failed": true
                 },
                 {
                     "name": "Clicking on checkox 1 will select checkbox 1",
                     "errs": [],
                     "durationMs": 3710,
                     "screenshotPath": null,
+                    "passed": true,
+                    "failed": false,
                     "skipped": false
                 },
                 {
@@ -33,6 +40,8 @@
                     ],
                     "durationMs": 9144,
                     "screenshotPath": "/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_09-26-18/test-3",
+                    "passed": false,
+                    "failed": true,
                     "skipped": false
                 },
                 {
@@ -40,6 +49,8 @@
                     "errs": [],
                     "durationMs": 2336,
                     "screenshotPath": null,
+                    "passed": true,
+                    "failed": false,
                     "skipped": false
                 }
             ]

@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-const report = require("./test-data.json");
+const report = require("./result_object.js");
 
 var app = express();
 

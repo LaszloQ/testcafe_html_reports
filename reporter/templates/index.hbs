@@ -27,26 +27,23 @@
     </header>
     <article class="fixtures">
         {{#each fixtures}}
-          <div class="fixture">
-              <button>{{name}}</button>
-              {{#each tests}}
-                <div class="test-container">
-                    <button class="test">{{name}} {{durationMs}}</button>
-                    {{#if errs.length}}
-                      <div class="details">
-                        <div class="error-container">Err: {{errs.[0]}}</div>
-                        <img src={{screenshotPath}} alt="error-screenshot">
-                      </div>
-                    {{/if}}
-                  </div>
-                  {{/each}}
-                {{/each}}
-              </div>
-
-          </div>
-
+        <div class="fixture hide-fixture {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
+            <button>{{name}}</button>
+            {{#each tests}}
+            <div class="test-container hide-test {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
+                <button class="test">{{name}} {{durationMs}}</button>
+                {{#if errs.length}}
+                <div class="details">
+                    <div class="error-container">Err: {{errs.[0]}}</div>
+                    <img src={{screenshotPath}} alt="error-screenshot">
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
     </article>
-  <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

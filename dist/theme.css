@@ -81,3 +81,11 @@ h2 {
     width: 600px;
     margin: 0 auto;
 }
+
+.hide-fixture .test-container {
+  display: none;
+}
+
+.hide-test .details {
+  display: none;
+}

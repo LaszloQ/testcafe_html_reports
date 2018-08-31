@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testcafe HTML Reports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            width: 100%;
+            margin: 10px 10px 40px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .fixture button,
+        .test-container button {
+            width: 100%;
+            font-size: 18px;
+            border: 1px solid dimgrey;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        .clearfix::after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+
+        .general-data,
+        .test-status {
+            width: 50%;
+            float: left;
+        }
+
+        .general-data {
+            color: #6c757d;
+        }
+
+        .test-status {
+            text-align: right;
+        }
+
+        .general-data p,
+        .test-status p {
+            margin: 5px;
+        }
+
+        .passed {
+            color: #28a745;
+        }
+
+        .skipped {
+            color: #007bff;
+        }
+
+        .failed,
+        .error-container {
+            color: #dc3545;
+        }
+
+        .test-container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .error-container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .fixtures .failed button,
+        .test-container .failed button {
+            color: #dc3545;
+        }
+
+        .fixtures .passed button,
+        .test-container .passed button {
+            color: #28a745;
+        }
+
+        .fixtures .skipped button,
+        .test-container .skipped button {
+            color: #007bff;
+        }
+
+        .hide-fixture .test-container {
+            display: none;
+        }
+
+        .hide-test .details {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Test Results</h1>
+        <div class="general-data-wrapper clearfix">
+            <div class="general-data">
+                <h2>User agent: {{general.user_agent}}</h2>
+                <h2>Total tests: {{general.total_tests}}</h2>
+                <h2>Total duration: {{general.total_duration}}</h2>
+            </div>
+            <div class="test-status">
+                <h2 class="passed">Passed: {{general.passed}}</h2>
+                <h2 class="failed">Failed: {{general.failed}}</h2>
+                <h2 class="skipped">Skipped: {{general.skipped}}</h2>
+            </div>
+        </div>
+    </header>
+    <article class="fixtures">
+        {{#each fixtures}}
+        <div class="fixture hide-fixture {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
+            <button>{{name}}</button>
+            {{#each tests}}
+            <div class="test-container hide-test {{#if passed}}passed{{/if}} {{#if failed}}failed{{/if}} {{#if skipped}}skipped{{/if}}">
+                <button class="test">{{name}} {{durationMs}}</button>
+                {{#if errs.length}}
+                <div class="details">
+                    <div class="error-container">Err: {{errs.[0]}}</div>
+                    <img src={{screenshotPath}} alt="error-screenshot">
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </article>
+    <script>
+        var fixtures = document.querySelectorAll(".fixture");
+
+        fixtures.forEach(function (fixture) {
+            var button = fixture.querySelector("button");
+            button.addEventListener("click", function () {
+                fixture.classList.toggle("hide-fixture");
+            });
+
+            var testsContainer = document.querySelectorAll(".test-container");
+            testsContainer.forEach(function (test) {
+                var button = test.querySelector("button");
+                button.addEventListener("click", function () {
+                    test.classList.toggle("hide-test");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

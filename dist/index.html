@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testcafe HTML Reports</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+    <header>
+        <h1>Test Results</h1>
+        <div class="general-data-wrapper clearfix">
+            <div class="general-data">
+                <h2>User agent: Firefox 60.0.0 / Mac OS X 10.13.0</h2>
+                <h2>Total tests: 6</h2>
+                <h2>Total duration: 69</h2>
+            </div>
+            <div class="test-status">
+                <h2 class="passed">Passed: 5</h2>
+                <h2 class="failed">Failed: 0</h2>
+                <h2 class="skipped">Skipped: 1</h2>
+            </div>
+        </div>
+    </header>
+    <article class="fixtures">
+        <button class="fixture">Checkboxes</button>
+        <div class="test-container">
+            <button class="test">Checkbox 2 is selected by default 5</button>
+
+        </div>        <div class="test-container">
+            <button class="test">Clicking on checkox 1 will select checkbox 1 3710</button>
+
+        </div>        <div class="test-container">
+            <button class="test">Clicking on checkbox 2 will deselect checkbox 2 9144</button>
+            <div class="error-container">AssertionError: expected false to deeply equal true
+
+Browser: Firefox 60.0.0 / Mac OS X 10.13.0
+Screenshot: /Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_09-26-18/test-3/Firefox_60.0.0_Mac_OS_X_10.13.0/errors/1.png
+
+   27 |
+   28 |
+   29 |  test( &quot;Clicking on checkbox 2 will deselect checkbox 2&quot;, async t &#x3D;&gt; {
+   30 |    await t
+   31 |      .click( checkboxPage.secondCheckBox )
+ &gt; 32 |      .expect( checkboxPage.secondCheckBox.checked ).eql( true )
+   33 |  });
+   34 |
+   35 |
+   36 |  test( &quot;Header should be Checkboxes&quot;, async t &#x3D;&gt; {
+   37 |    const header &#x3D; await checkboxPage.header.innerText;
+
+   at eql (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:32:54)
+   at test (/Users/laszlokiss/Desktop/testcafe_html_reports/src/tests/checkboxes/checkbox-tests.js:29:3)</div>
+            <img src=/Users/laszlokiss/Desktop/testcafe_html_reports/screenshots/2018-08-31_09-26-18/test-3 alt="error-screenshot"> 
+        </div>        <div class="test-container">
+            <button class="test">Header should be Checkboxes 2336</button>
+
+        </div> 
+    </article>
+
+</body>
+
+</html>
